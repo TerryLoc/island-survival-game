@@ -1,4 +1,12 @@
 import random
+import time
+
+def exit_game():
+    '''This function is called when the user decides not to board the flight.'''
+    print('Game Over! You have decided not to board your flight.')
+    print('Maybe you will catch the next flight.')
+    print('Goodbye!')
+    exit()
 
 def print_welcome_message():
     print('\nWELCOME TO THE ISLAND SURVIVAL GAME!\n')
@@ -10,8 +18,15 @@ def print_welcome_message():
     
 def get_user_name():
     user_name = input('What is your name adventure? ').lower().capitalize()
-    print(f'\nWelcome {user_name}! You are the sole survivor of your plan crash, having washed ashore on a deserted island.\n')
-    
+    board_plan = input(f'\nWelcome {user_name}! Are you ready to board your flight (y/n)? ').lower()
+    if board_plan == 'y':
+        print('\nGreat! You are now boarding your flight to your work destination.\n')
+        print('Unfortunately your plane gets caught in a freak storm.\n')
+        print(f'Oh no {user_name}! You are the sole survivor of your plan crashing, having washed ashore on a deserted island.\n')
+    else:
+        exit_game()
+   
+    time.sleep(3)
     random_event()
     
 def random_event():
