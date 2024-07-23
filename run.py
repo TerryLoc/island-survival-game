@@ -1,17 +1,21 @@
 import random
 import time
-import curses
+import images
+import jungle
+import cave
+
 
 def exit_game():
     '''This function is called when the user decides not to board the flight.'''
-    print('Game Over! You have decided not to board your flight.')
+    print('\nGame Over! You have decided not to board your flight.')
     print('Maybe you will catch the next flight.')
     print('Goodbye!')
+    print(images.game_over)
     exit()
 
 def print_welcome_message():
-    print('\nWELCOME TO THE ISLAND SURVIVAL GAME!\n')
-    
+    print(images.title)
+    # These are the rules of the game that the user will see when they start the game.
     print('How to play:\n1. You will be given a scenario and you will have to choose from a list of options.\n2. You use the arrow keys to enter your option eg.(left, right, up, down).\n3. You will be given a new scenario based on your choice.\n4. You will have to make the right choices to survive and escape the island.\n')
 
     get_user_name()
@@ -24,7 +28,7 @@ def get_user_name():
             break
         else:
             print("Please enter a name using letters only.\n")
-    board_plan = input(f'\nWelcome {user_name}! Are you ready to board your flight (y/n) ? ').lower()
+    board_plan = input(f'\nWelcome {user_name}! Are you ready to board your flight (y/n) ? \n').lower()
     
     if board_plan == 'y':
         print('\nGreat! You are now boarding your flight to your work destination.\n')
@@ -34,59 +38,52 @@ def get_user_name():
         exit_game()
    
     time.sleep(3)
-    random_event()
+    first_event()
     
-def random_event():
+def first_event():
     day_night = random.choice(['day', 'night'])
     if day_night == 'day':
         print('It is day time. You can see the sun shining brightly.\nThe weather is warm and the sky is clear. You can see the blue ocean and golden beach.\n\nStraight ahead is a dense jungle.\nTo your left you see a dark cave entrance.\nTo your right, you see a tall rocky cliff face.\n')
     else:  
         print('It is night time. The moon is shining brightly.\nThe weather is cool and the sky is clear.\nYou can see the stars twinkling in the sky. You hear the sound of the ocean waves crashing on the shore.\n\nStraight ahead is a dark dense jungle.\nTo your left, you can just about make out a dark cave.\nTo your right, you see a steep rocky cliff.\n')
         
+    second_event(day_night)
+
+def second_event(day_night):
+    print('Which direction would you like to go?')
+    print('1. Straight ahead to the jungle.')
+    print('2. To the left to the dark cave.')
+    print('3. Head right to the step cliff.')
+    print('4. Stay put.')
+    user_choice = input('Enter your choice: \n')
     
-    # To run the curses application, wrap the function call with curses.wrapper
-    curses.wrapper(get_user_choice)
-
-
-def get_user_choice(stdscr):
-    curses.curs_set(0)  # Hide the cursor
-    options = ['left', 'right', 'up', 'down']
-    current_row = 0
-
-    def print_menu(current_row):
-        stdscr.clear()
-        stdscr.addstr("Choose your direction using arrow keys and press Enter:\n")
-        for idx, option in enumerate(options):
-            if idx == current_row:
-                stdscr.addstr(idx + 1, 0, option, curses.A_REVERSE)
-            else:
-                stdscr.addstr(idx + 1, 0, option)
-        stdscr.refresh()
-
-    while True:
-        print_menu(current_row)
-        key = stdscr.getch()
-
-        if key == curses.KEY_UP and current_row > 0:
-            current_row -= 1
-        elif key == curses.KEY_DOWN and current_row < len(options) - 1:
-            current_row += 1
-        elif key == curses.KEY_ENTER or key in [10, 13]:
-            break
-
-    user_choice = options[current_row]
-    stdscr.clear()
-    if user_choice == 'left':
-        stdscr.addstr('You have chosen to explore the dark cave.\n')
-    elif user_choice == 'right':
-        stdscr.addstr('You have chosen to climb the rocky cliff.\n')
-    elif user_choice == 'up':
-        stdscr.addstr('You have chosen to walk straight ahead into the dense jungle.\n')
+    if user_choice == '1':
+        time.sleep(2)
+        jungle.jungle()
+    elif user_choice == '2':
+        time.sleep(2)
+        cave.cave()
+    elif user_choice == '3':
+        print('You have chosen to go to the right to the steep cliff.')
+        time.sleep(2)
+        print('You walk towards the steep cliff and see that it is too high to climb.\n')
+        print('You decide to head back to the beach.\n')
+        time.sleep(2)
+        print('You walk back to the beach and see a ship in the distance.\n')
+        print('You wave your hands and the ship sees you and comes to rescue you.\n')
+        print('Congratulations! You have been rescued and survived the island.\n')
+        print('You have won the game.\n')
+        print(images.game_over)
+        exit()
     else:
-        stdscr.addstr('You have chosen to stay put and wait till morning.\n')
-    stdscr.refresh()
-    stdscr.getch()
+        print('You have chosen to stay put and wait for help to arrive.\n')
+        time.sleep(2)
+        print('You wait for a while but no help arrives.\n')
+        print('You decide to go look for help.\n')
+        time.sleep(2)
+        first_event() 
 
+    
 
     
 def main():
