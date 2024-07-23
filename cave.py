@@ -51,4 +51,4 @@ def cave():
             print('You have been captured by the pirates leading to you never been seen again.\nYou have lost the game.\n')
             print(images.game_over)
             exit()
-                
+            
