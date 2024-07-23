@@ -1,4 +1,5 @@
 import time
+import images
 
 def cave():
     while True:
@@ -12,7 +13,7 @@ def cave():
             print('Which direction would you like to go?')
             print('1. Deeper into the cave.')
             print('2. Head back out of the cave.')
-            user_choice = input('Enter your choice: ')
+            user_choice = input('Enter your choice: \n')
             
             if user_choice == '1':
                 print('You have chosen to go deeper into the cave. You walk for a while and come across what looks like a treasure chest.\n')
@@ -20,22 +21,26 @@ def cave():
                 print('What would you like to do?')
                 print('1. Open the treasure chest.')
                 print('2. Head back out of the cave.\n')
-                user_choice2 = input('Enter your choice: ')
+                user_choice2 = input('Enter your choice: \n')
                 
                 if user_choice2 == '1':
                     print('\nYou have chosen to open the treasure chest. You open the treasure chest and find a lot of gold and jewels inside.\n')
                     print('You have found the treasure and are now rich.\nCongratulations! You have won the game.\n')
+                    print(images.game_over)
+                    exit()
                 else:
                     print('\nYou have chosen to head back out of the cave. You walk back to the beach and see a ship in the distance.\n')
                     print('You wave your hands and the ship sees you and comes to rescue you.\n')
                     print('Congratulations! You have been rescued and survived the island.\n')
                     print('You have won the game.\n')
-                    exit()    
+                    print(images.game_over)
+                    exit()   
             else: 
                 print('\nYou have chosen to head back out of the cave. You walk back to the beach and see a ship in the distance.\n')
                 print('You wave your hands and the ship sees you.\nAs the ship comes closer, you see that it is a pirate ship.\n')
                 print('The pirates capture you and take you on board their ship.\n')
                 print('You have been captured by the pirates leading to you never been seen again.\nYou have lost the game.\n')
+                print(images.game_over)
                 exit()     
                                         
                 
@@ -44,5 +49,6 @@ def cave():
             print('You wave your hands and the ship sees you.\nAs the ship comes closer, you see that it is a pirate ship.\n')
             print('The pirates capture you and take you on board their ship.\n')
             print('You have been captured by the pirates leading to you never been seen again.\nYou have lost the game.\n')
+            print(images.game_over)
             exit()
                 
