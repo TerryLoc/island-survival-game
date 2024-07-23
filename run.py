@@ -18,7 +18,7 @@ def exit_game():
 def print_welcome_message():
     """Prints the welcome message and game rules."""
     print(images.title)
-    print('How to play:\n1. You will be given a scenario and you choose from a list of options.\n2. You use the arrow keys to enter your option eg.(left, right, up, down).\n3. You will be given a new scenario based on your choice.\n4. You will have to make the right choices to survive and escape the island.\n')
+    print('How to play:\n1. You will be given a scenario and you choose from a list of options.\n2. You use numbers to enter your option eg.(1, 2, 3, 4).\n3. You will be given a new scenario based on your choice.\n4. You will have to make the right choices to survive and escape the island.\n')
     get_user_name()
 
 def get_user_name():

@@ -45,7 +45,7 @@ def jungle():
         user_choice = input('Enter your choice: \n')
         
         if user_choice == '1':
-            print('\nYou have chosen to go inside the shelter.\n You walk inside the shelter.\n There is a bed, a table and a chair inside the shelter.\nYou also find some food and water.\n')
+            print('\nYou have chosen to go inside the shelter.\nYou walk inside the shelter.\nThere is a bed, a table and a chair inside the shelter.\nYou also find some food and water.\n')
             print('You decide to rest for a while and eat some food.\n')
         else:
             print('You have chosen to head back to the jungle.\n You walk back to the jungle and come across a wild boar.\n')
