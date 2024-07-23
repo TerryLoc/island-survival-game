@@ -7,16 +7,16 @@ import cave
 
 def exit_game():
     '''This function is called when the user decides not to board the flight.'''
-    print('\nGame Over! You have decided not to board your flight.')
-    print('Maybe you will catch the next flight.')
-    print('Goodbye!')
+    print('\nYou have decided not to board your flight.')
+    print('Maybe you will catch the next one.')
+    print('Goodbye for now!')
     print(images.game_over)
     exit()
 
 def print_welcome_message():
     print(images.title)
     # These are the rules of the game that the user will see when they start the game.
-    print('How to play:\n1. You will be given a scenario and you will have to choose from a list of options.\n2. You use the arrow keys to enter your option eg.(left, right, up, down).\n3. You will be given a new scenario based on your choice.\n4. You will have to make the right choices to survive and escape the island.\n')
+    print('How to play:\n1. You will be given a scenario and you choose from a list of options.\n2. You use the arrow keys to enter your option eg.(left, right, up, down).\n3. You will be given a new scenario based on your choice.\n4. You will have to make the right choices to survive and escape the island.\n')
 
     get_user_name()
 
