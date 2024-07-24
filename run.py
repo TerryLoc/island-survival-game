@@ -7,6 +7,7 @@ import cave
 YES = 'y'
 NO = 'n'
 
+# Functions to handle user input and game flow
 def exit_game():
     """Exits the game with a goodbye message."""
     print('\nYou have decided not to board your flight.')
@@ -14,6 +15,16 @@ def exit_game():
     print('Goodbye for now!')
     print(images.game_over)
     exit()
+
+def get_numeric_choice(prompt): # Now user_choice is guaranteed to be a number 
+    """Prompts the user for a numeric input and validates it."""
+    while True:
+        user_choice = input(prompt).strip()  # Remove leading/trailing whitespaces
+        if user_choice.isdigit():
+            return int(user_choice) # Convert to integer
+        else:
+            print('Invalid input. Please enter a number matching your choice.')
+
 
 def print_welcome_message():
     """Prints the welcome message and game rules."""
@@ -35,7 +46,7 @@ def initiate_boarding(user_name):
     """Initiates the boarding process based on user's choice."""
     board_plan = ''
     while board_plan not in [YES, NO]:
-        board_plan = input(f'\nWelcome {user_name}! Are you ready to board your flight (y/n)? \n').lower()
+        board_plan = input(f'\nWelcome {user_name}! Are you ready to board your flight (y/n)? \n').lower().strip()
         if board_plan not in [YES, NO]:
             print("Please enter 'y' for yes or 'n' for no.")
     
@@ -60,22 +71,28 @@ def first_event():
 def second_event(day_night):
     """Presents the second event scenario based on the user's choice."""
     print('Which direction would you like to go?')
-    print('1. Straight ahead to the jungle.')
-    print('2. To the left to the dark cave.')
-    print('3. Head right to the steep cliff.')
-    print('4. Stay put.')
-    user_choice = input('Enter your choice: \n')
+    print('1. Straight ahead to the creepy jungle.')
+    print('2. To the left to the dark cave in the distance.')
+    print('3. Head right to the steep cliff to check it out.')
+    print('4. Or would you rather stay put.')
     
-    if user_choice == '1':
+    user_choice = get_numeric_choice('Enter your choice: \n')
+
+    if user_choice == 1:
         time.sleep(2)
         jungle.jungle()
-    elif user_choice == '2':
+    elif user_choice == 2:
         time.sleep(2)
         cave.cave()
-    elif user_choice == '3':
-        handle_cliff_scenario()
-    else:
+    elif user_choice == 3:
+        time.sleep(2)
+        handle_cliff_scenario()  # Assuming there's a cliff module and function
+    elif user_choice == 4:
         handle_stay_put_scenario()
+    else:
+        print('Invalid choice. Please try again.')
+        second_event(day_night)  # Re-prompt if the choice is not valid
+
 
 def handle_cliff_scenario():
     """Handles the scenario when the user chooses to go to the cliff."""
