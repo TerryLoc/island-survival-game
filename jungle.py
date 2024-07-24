@@ -1,5 +1,6 @@
 import time
 import images
+import run
 
 def jungle():
     print('You have chosen to go straight ahead to the jungle.')
@@ -12,18 +13,18 @@ def jungle():
     print('1. To the left.')
     print('2. To the right.')
     print('3. Head back to the beach.')
-    user_choice = input('Enter your choice: \n')
+    user_choice = run.get_numeric_choice('Enter your choice: \n')
     
-    if user_choice == '1':
+    if user_choice == 1:
         print('You have chosen to go left. You walk for a while and come across a river.\n As you go closer to the river, you see a boat on the other side.\n')
         time.sleep(2)
         print('You can choose to swim across the river or head back to the jungle.\n')
         print('What would you like to do?')
         print('1. Swim across the river.')
         print('2. Head back to the jungle.\n')
-        user_choice = input('Enter your choice: \n')
+        user_choice = run.get_numeric_choice('Enter your choice: \n')
         
-        if user_choice == '1':
+        if user_choice == 1:
             print('\nYou have chosen to swim across the river.\n You start swimming across the river but the current is too strong and you get swept away.\n')
             print('You drown and die.\n')
             print(images.game_over)
@@ -36,7 +37,7 @@ def jungle():
             exit()
         
     
-    elif user_choice == '2':
+    elif user_choice == 2:
         print('\nYou have chosen to go right. You walk for a while and come across a what looks like man made shelter.\n')
         print('You can choose to go inside the shelter or head back to the jungle.\n')
         print('What would you like to do?')
@@ -44,7 +45,7 @@ def jungle():
         print('2. Head back to the jungle.\n')
         user_choice = input('Enter your choice: \n')
         
-        if user_choice == '1':
+        if user_choice == 1:
             print('\nYou have chosen to go inside the shelter.\nYou walk inside the shelter.\nThere is a bed, a table and a chair inside the shelter.\nYou also find some food and water.\n')
             print('You decide to rest for a while and eat some food.\n')
         else:
@@ -59,4 +60,3 @@ def jungle():
         print('You have won the game.\n')
         print(images.game_over)
         exit()
-        
