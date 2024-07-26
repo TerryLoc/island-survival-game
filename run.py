@@ -48,6 +48,7 @@ def get_user_name():
             break
         else:
             print("Please enter a name using letters only.\n")
+
     initiate_boarding(user_name)
 
 
@@ -69,7 +70,7 @@ def initiate_boarding(user_name):
         print("\nGreat! You are now boarding your flight to your work destination.\n")
         print("Unfortunately your plane gets caught in a freak storm.\n")
         print(
-            f"Oh no {user_name}! You are the sole survivor of your plan crashing, having washed ashore on a deserted island.\n"
+            f"Oh no {user_name}! Your plane has crashed and you are the sole survivor. You have washed ashore on a deserted island.\n"
         )
         time.sleep(4)
         first_event()
@@ -85,20 +86,24 @@ def first_event():
     else:
         print(DAY_NIGHT["night"][0])
 
+    time.sleep(3)
     second_event(day_night)
 
 
 def second_event(day_night):
     """Presents the second event scenario based on the user's choice."""
-    print("Which direction would you like to go?")
-    print("1. Straight ahead to the creepy jungle.")
-    print("2. To the left towards the dark cave in the distance.")
-    print("3. Head right to the steep cliff to check it out.")
-    print("4. Or would you rather stay put.")
 
-    print(movements["beach"][day_night])
+    def print_choices(day_night):
+        '''Prints the choices based on the time of day.'''
+        choices = movements["first_choices"][day_night]
+        print("What would you like to do next?\n")
+        for key, value in choices.items():
+            print(f"{key}: {value}")
 
-    user_choice = get_numeric_choice("Enter your choice: \n")
+    # call the function to print the choices
+    print_choices(day_night)
+
+    user_choice = get_numeric_choice("\nEnter your choice: \n")
 
     if user_choice == 1:
         time.sleep(2)
