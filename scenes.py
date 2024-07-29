@@ -23,8 +23,7 @@ movements = {
             "4": "Or stay put, on the beach till morning.",
         },
     },
-    "beach": {"day": {}, "night": {}},
+    "jungle": {"day": {'ITS OK AND SAFE'}, "night": {"YOU DIE"}},
     "cave": {"day": {}, "night": {}},
-    "jungle": {"day": {}, "night": {}},
     "cliffs": {"day": {}, "night": {}},
 }
