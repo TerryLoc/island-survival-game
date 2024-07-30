@@ -27,27 +27,30 @@ movements = {
         },
     },
     "jungle": {
-        "day": [
-            "You are now in the jungle. The trees are tall and dense.\n"
+        "day": {
+            "description": "You are now in the jungle. The trees are tall and dense.\n"
             "The air is humid and you can hear the sound of the birds chirping.\n"
-            "You walk for a while and come across a fork in the path.\n"
-            "You can choose to go left, right or head back to the beach.\n"
-        ],
-        "choices": {
-            "1": "You have chosen to go left. You walk for a while and come across a sparkling river. "
-            "The water looks refreshing, and you notice some colorful fish swimming beneath the surface. "
-            "You can choose to swim across, fish on the bank, or head back to the beach.",
-            "2": "You have chosen to go right. You walk through the dense jungle and encounter a group of friendly monkeys. "
-            "They offer to show you a hidden path or lead you back to the beach.",
-            "3": "You have chosen to head back to the beach.",
+            "You walk for a while and come across a fork in the path.\n",
+            "choices": {
+                "1": "Go left",
+                "2": "Go right",
+                "3": "Head back to the beach",
+            },
+            "outcome": {
+                "1": "You have chosen to go left. You walk for a while and come across a sparkling river. "
+                "The water looks refreshing, and you notice some colorful fish swimming beneath the surface. "
+                "You can choose to swim across, fish on the bank, or head back to the beach.",
+                "2": "You have chosen to go right. You walk through the dense jungle and encounter a group of friendly monkeys. "
+                "They offer to show you a hidden path or lead you back to the beach.",
+                "3": "You have chosen to head back to the beach.",
+            },
         },
-        "night": [
-            "You are now in the dark jungle. The trees are tall and dense and all around you.\n"
+        "night": {
+            "description": "You are now in the dark jungle. The trees are tall and dense and all around you.\n"
             "You feel like a million eyes are watching you.\n"
             "All of a sudden a big black panther leaps from a tree.\n"
-            "You are taken out and your journey has ended. YOU'RE DEAD!",
-            images.game_over,
-        ],
+            "You are taken out and your journey has ended.\n    🪦 YOU'RE DEAD 🪦\n\n" + images.game_over,
+        },
     },
     "cave": {
         "day": [
@@ -63,7 +66,7 @@ movements = {
             "You hear a strange noise coming from the darkness.\n"
             "You decide to explore deeper into the cave.\n"
             "As you walk further, run into a massive bear. As you turn to run...\n"
-            "The bear catches you and you are mauled to death. YOU'RE DEAD!",
+            "The bear catches you and you are mauled to death. YOU'RE DEAD!\n",
             images.game_over,
         ],
     },
@@ -81,7 +84,7 @@ movements = {
         "night": [
             "You are now at the cliffs at night. The wind is howling and it's hard to see anything above your head. "
             "You decide to climb the cliff.\n"
-            "As you are climbing a rock falls and hits you on the head. You fall to your death. YOU'RE DEAD!",
+            "As you are climbing a rock falls and hits you on the head. You fall to your death. YOU'RE DEAD!\n",
             images.game_over,
         ],
     },
