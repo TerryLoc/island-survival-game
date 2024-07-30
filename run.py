@@ -104,13 +104,31 @@ def second_event(day_night):
     # Get the user's choice 
     user_choice = get_numeric_choice("\nPick your direction (1-4): \n")
     
-    handle_scenarios(day_night, user_choice)
+    handle_scenarios(day_night, user_choice, movements)
 
 
 def handle_scenarios(day_night, user_choice, movements):
+    
+    def print_choices(description, choices=None):
+        """Prints the description and choices."""
+        print(description)
+        if choices:
+            print("Where would you like to explore?\n")
+            for key, value in choices.items():
+                print(f"{key}: {value}")
+        
     """Handles the scenarios based on the user's choice."""
     if user_choice == 1:
-       movements["jungle"][day_night]
+        if day_night == 'day':
+            # To print choices for day:
+            day_info = movements["jungle"]["day"] # Get the day info
+            print_choices(day_info["description"], day_info["choices"])
+        else:
+            # To print choices for night:
+            night_info = movements["jungle"]["night"] # Get the night info
+            print_choices(night_info["description"])
+            exit()
+        
     elif user_choice == 2:
         movements["cave"][day_night]
     elif user_choice == 3:
