@@ -70,7 +70,7 @@ def initiate_boarding(user_name):
         print("\nGreat! You are now boarding your flight to your work destination.\n")
         print("Unfortunately your plane gets caught in a freak storm.\n")
         print(
-            f"Oh no {user_name}! Your plane has crashed and you are the sole survivor. You have washed ashore on a deserted island.\n"
+            f"Oh no {user_name}! Your plane has crashed and you are the sole survivor.\nYou have washed ashore on a deserted island.\n"
         )
         time.sleep(4)
         first_event()
@@ -89,38 +89,37 @@ def first_event():
     time.sleep(3)
     second_event(day_night)
 
-
 def second_event(day_night):
     """Presents the second event scenario based on the user's choice."""
 
     def print_choices(day_night):
-        '''Prints the choices based on the time of day.'''
+        """Prints the choices based on the time of day."""
         choices = movements["first_choices"][day_night]
         print("What would you like to do next?\n")
         for key, value in choices.items():
             print(f"{key}: {value}")
 
-    # call the function to print the choices
+    # Call the function to print the choices
     print_choices(day_night)
+    # Get the user's choice 
+    user_choice = get_numeric_choice("\nPick your direction (1-4): \n")
+    
+    handle_scenarios(day_night, user_choice)
 
-    user_choice = get_numeric_choice("\nEnter your choice: \n")
 
+def handle_scenarios(day_night, user_choice, movements):
+    """Handles the scenarios based on the user's choice."""
     if user_choice == 1:
-        time.sleep(2)
-        jungle.jungle()
+       movements["jungle"][day_night]
     elif user_choice == 2:
-        time.sleep(2)
-        cave.cave()
+        movements["cave"][day_night]
     elif user_choice == 3:
-        time.sleep(2)
-        handle_cliff_scenario()  # Assuming there's a cliff module and function
-    elif user_choice == 4:
-        handle_stay_put_scenario()
+        movements["cliff"][day_night]
     else:
-        print("Invalid choice. Please try again.")
-        second_event(day_night)  # Re-prompt if the choice is not valid
+        handle_stay_put_scenario()
 
-
+        
+        
 def handle_cliff_scenario():
     """Handles the scenario when the user chooses to go to the cliff."""
     print("You have chosen to go to the right to the steep cliff.")
