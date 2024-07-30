@@ -1,3 +1,6 @@
+import time
+import images
+
 DAY_NIGHT = {
     "day": [
         "It is day time. You can see the sun shining brightly.\nThe weather is warm and the sky is clear. You can see the blue ocean and golden beach.\nStraight ahead is a dense jungle.\nTo your left you see a dark cave entrance.\nTo your right, you see a tall rocky cliff face.\n"
@@ -23,7 +26,63 @@ movements = {
             "4": "Or stay put, on the beach till morning.",
         },
     },
-    "jungle": {"day": {'ITS OK AND SAFE'}, "night": {"YOU DIE"}},
-    "cave": {"day": {}, "night": {}},
-    "cliffs": {"day": {}, "night": {}},
+    "jungle": {
+        "day": [
+            "You are now in the jungle. The trees are tall and dense.\n"
+            "The air is humid and you can hear the sound of the birds chirping.\n"
+            "You walk for a while and come across a fork in the path.\n"
+            "You can choose to go left, right or head back to the beach.\n"
+        ],
+        "choices": {
+            "1": "You have chosen to go left. You walk for a while and come across a sparkling river. "
+            "The water looks refreshing, and you notice some colorful fish swimming beneath the surface. "
+            "You can choose to swim across, fish on the bank, or head back to the beach.",
+            "2": "You have chosen to go right. You walk through the dense jungle and encounter a group of friendly monkeys. "
+            "They offer to show you a hidden path or lead you back to the beach.",
+            "3": "You have chosen to head back to the beach.",
+        },
+        "night": [
+            "You are now in the dark jungle. The trees are tall and dense and all around you.\n"
+            "You feel like a million eyes are watching you.\n"
+            "All of a sudden a big black panther leaps from a tree.\n"
+            "You are taken out and your journey has ended. YOU'RE DEAD!",
+            images.game_over,
+        ],
+    },
+    "cave": {
+        "day": [
+            "You are now in the cave. It's dark and cool inside. You can see faint light at the end of one tunnel, and hear dripping water in another.\n You can choose to explore deeper, head towards the light, or go back to the jungle."
+        ],
+        "choices": {
+            "1": "You have chosen to explore deeper into the cave. The air gets colder and you find ancient cave paintings on the walls.",
+            "2": "You have chosen to head towards the light. The tunnel opens up into a hidden grotto with a beautiful waterfall.",
+            "3": "You have chosen to go back to the jungle.",
+        },
+        "night": [
+            "You are now in the cave at night. It's pitch black and you can barely see your own hands.\n"
+            "You hear a strange noise coming from the darkness.\n"
+            "You decide to explore deeper into the cave.\n"
+            "As you walk further, run into a massive bear. As you turn to run...\n"
+            "The bear catches you and you are mauled to death. YOU'RE DEAD!",
+            images.game_over,
+        ],
+    },
+    "cliffs": {
+        "day": [
+            "You are now at the cliffs. The view is breathtaking and you can see the ocean far below. "
+            "There is a narrow path leading down the cliffs, and another path going back to the jungle.\n"
+            "You can choose to climb down, look for a way around, or go back to the jungle."
+        ],
+        "choices": {
+            "1": "You have chosen to climb down the cliffs. It's a challenging descent, but you manage to reach a secluded beach.",
+            "2": "You have chosen to look for a way around. After a long walk, you find a hidden cave entrance.",
+            "3": "You have chosen to go back to the jungle.",
+        },
+        "night": [
+            "You are now at the cliffs at night. The wind is howling and it's hard to see anything above your head. "
+            "You decide to climb the cliff.\n"
+            "As you are climbing a rock falls and hits you on the head. You fall to your death. YOU'RE DEAD!",
+            images.game_over,
+        ],
+    },
 }
