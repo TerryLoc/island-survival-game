@@ -128,14 +128,16 @@ def handle_scenarios(day_night, user_choice, movements):
             night_info = movements["jungle"]["night"] # Get the night info
             print_choices(night_info["description"])
             exit()
-        
     elif user_choice == 2:
-        movements["cave"][day_night]
-    elif user_choice == 3:
-        movements["cliff"][day_night]
-    else:
-        handle_stay_put_scenario()
-
+        if day_night == 'day':
+            # To print choices for day:
+            day_info = movements["cave"]["day"]
+            print_choices(day_info["description"], day_info["choices"])
+        else:
+            # To print choices for night:
+            night_info = movements["cave"]["night"]
+            print_choices(night_info["description"])
+            exit()
         
         
 def handle_cliff_scenario():
