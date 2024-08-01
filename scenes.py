@@ -1,4 +1,4 @@
-import time
+# Description: This file contains the scenes and choices for the game. The scenes are divided into different sections such as day, night, jungle, cave, and cliff. Each section has a description, choices, and outcomes based on the user's choice. The scenes are stored in a dictionary format for easy access and retrieval. The scenes are displayed to the user based on the time of day and the user's choice. The user can explore different paths and make choices that will determine the outcome of the game. The scenes are designed to create an immersive and interactive experience for the user.
 import images
 
 DAY_NIGHT = {
@@ -49,8 +49,7 @@ movements = {
             "description": "You are now in the dark jungle. The trees are tall and dense and all around you.\n"
             "You feel like a million eyes are watching you.\n"
             "All of a sudden a big black panther leaps from a tree.\n"
-            "You are taken out and your journey has ended.\n    🪦  YOU'RE DEAD 🪦\n\n"
-            # + time.sleep(3)
+            "You are taken out and your journey has ended.\n\n    🪦  YOU'RE DEAD 🪦\n\n"
             + images.game_over,
         },
     },
@@ -71,27 +70,27 @@ movements = {
             "You hear a strange noise coming from the darkness.\n"
             "You decide to explore deeper into the cave.\n"
             "As you walk further, run into a massive bear. As you turn to run...\n"
-            "The bear catches you and you are mauled to death.\n    🪦  YOU'RE DEAD 🪦\n\n"
+            "The bear catches you and you are mauled to death.\n\n    🪦  YOU'RE DEAD 🪦\n\n"
             # + time.sleep(3)
             + images.game_over,
         },
     },
-    "cliffs": {
-        "day": [
-            "You are now at the cliffs. The view is breathtaking and you can see the ocean far below. "
+    "cliff": {
+        "day": {
+            "description": "You are now at the cliffs. The view is breathtaking and you can see the ocean far below. "
             "There is a narrow path leading down the cliffs, and another path going back to the jungle.\n"
-            "You can choose to climb down, look for a way around, or go back to the jungle."
-        ],
-        "choices": {
-            "1": "You have chosen to climb down the cliffs. It's a challenging descent, but you manage to reach a secluded beach.",
-            "2": "You have chosen to look for a way around. After a long walk, you find a hidden cave entrance.",
-            "3": "You have chosen to go back to the jungle.",
+            "You can choose to climb up, look for a way around, or go back to the jungle.\n",
+            "choices": {
+                "1": "You have chosen to climb down the cliffs. It's a challenging climb, but you manage to reach a secluded plato.",
+                "2": "You have chosen to look for a way around. After a long walk, you find a hidden cave entrance.",
+                "3": "You have chosen to go back to the jungle.",
+            },
         },
-        "night": [
-            "You are now at the cliffs at night.\nThe wind is howling and it's hard to see anything above your head. "
+        "night": {
+            "description": "You are now at the cliffs at night.\nThe wind is howling and it's hard to see anything above your head. "
             "You decide to climb the cliff.\n"
-            "As you are climbing a rock falls and hits you on the head.\nYou lose your grip  & fall into the darkness.\n    🪦YOU'RE DEAD🪦\n\n"
+            "As you are climbing a rock falls and hits you on the head.\nYou lose your grip & fall into the darkness.\n\n    🪦  YOU'RE DEAD 🪦\n\n"
             + images.game_over,
-        ],
+        },
     },
 }
