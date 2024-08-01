@@ -49,26 +49,32 @@ movements = {
             "description": "You are now in the dark jungle. The trees are tall and dense and all around you.\n"
             "You feel like a million eyes are watching you.\n"
             "All of a sudden a big black panther leaps from a tree.\n"
-            "You are taken out and your journey has ended.\n    🪦 YOU'RE DEAD 🪦\n\n" + images.game_over,
+            "You are taken out and your journey has ended.\n    🪦  YOU'RE DEAD 🪦\n\n"
+            # + time.sleep(3)
+            + images.game_over,
         },
     },
     "cave": {
-        "day": [
-            "You are now in the cave. It's dark and cool inside. You can see faint light at the end of one tunnel, and hear dripping water in another.\n You can choose to explore deeper, head towards the light, or go back to the jungle."
-        ],
-        "choices": {
-            "1": "You have chosen to explore deeper into the cave. The air gets colder and you find ancient cave paintings on the walls.",
-            "2": "You have chosen to head towards the light. The tunnel opens up into a hidden grotto with a beautiful waterfall.",
-            "3": "You have chosen to go back to the jungle.",
+        "day": {
+            "description": "You are now in the cave. It's dark and damp, and you can hear the sound of dripping water.\n"
+            "You see two paths ahead of you. The left one is narrow and winding, and the other dark and deeper.\n"
+            "Or you can head back to the beach.\n",
+            "choices": {
+                "1": "Go left down the narrow path",
+                "2": "Or go right towards the dark and deeper path",
+                "3": "Head back to the beach",
+            },
+            "outcome": {},
         },
-        "night": [
-            "You are now in the cave at night. It's pitch black and you can barely see your own hands.\n"
+        "night": {
+            "description": "You are now in the cave at night. It's pitch black and you can barely see your own hands.\n"
             "You hear a strange noise coming from the darkness.\n"
             "You decide to explore deeper into the cave.\n"
             "As you walk further, run into a massive bear. As you turn to run...\n"
-            "The bear catches you and you are mauled to death. YOU'RE DEAD!\n",
-            images.game_over,
-        ],
+            "The bear catches you and you are mauled to death.\n    🪦  YOU'RE DEAD 🪦\n\n"
+            # + time.sleep(3)
+            + images.game_over,
+        },
     },
     "cliffs": {
         "day": [
@@ -82,10 +88,10 @@ movements = {
             "3": "You have chosen to go back to the jungle.",
         },
         "night": [
-            "You are now at the cliffs at night. The wind is howling and it's hard to see anything above your head. "
+            "You are now at the cliffs at night.\nThe wind is howling and it's hard to see anything above your head. "
             "You decide to climb the cliff.\n"
-            "As you are climbing a rock falls and hits you on the head. You fall to your death. YOU'RE DEAD!\n",
-            images.game_over,
+            "As you are climbing a rock falls and hits you on the head.\nYou lose your grip  & fall into the darkness.\n    🪦YOU'RE DEAD🪦\n\n"
+            + images.game_over,
         ],
     },
 }
