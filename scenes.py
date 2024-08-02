@@ -37,12 +37,16 @@ movements = {
                 "3": "Head back to the beach",
             },
             "outcome": {
-                "1": "You have chosen to go left. You walk for a while and come across a sparkling river. "
-                "The water looks refreshing, and you notice some colorful fish swimming beneath the surface. "
-                "You can choose to swim across, fish on the bank, or head back to the beach.",
-                "2": "You have chosen to go right. You walk through the dense jungle and encounter a group of friendly monkeys. "
-                "They offer to show you a hidden path or lead you back to the beach.",
+                "1": "You have chosen to go left.\nYou walk for a while and come across a sparkling river.\nThe water looks refreshing, & you notice some colorful fish swimming beneath the surface.\nYou choose to swim up stream but the river is so strong.\n You are swept away and your journey has ended.\n\n    🪦  YOU'RE DEAD 🪦\n\n"
+                + images.game_over,
+                "2": "You have chosen to go right.\nYou walk through the dense jungle & encounter a group of friendly monkeys.\nThey offer to show you 1. A hidden path or 2. lead you back to the beach.",
                 "3": "You have chosen to head back to the beach.",
+            },
+            "options": {
+                "1": "You follow the monkeys and they lead you to a hidden path that takes you to a beautiful waterfall.\nYou decide to take a swim in the cool water and relax.\nAfter a while, a rescue party find you relaxing and swimming.\nYour journey has ended happily. 🏝️\n\n    🎉  YOU ARE SAVED 🎉\n\n"
+                + images.game_over,
+                "2": "You are heading back to the beach and you see smoke.\nAs you emerge from the forest, there is a group of people partying.\nThey have a boat and want to help you.2\nYour journey has ended happily. 🍻\n\n    🎉  YOU ARE SAVED 🎉\n\n"
+                + images.game_over,
             },
         },
         "night": {
@@ -71,7 +75,6 @@ movements = {
             "You decide to explore deeper into the cave.\n"
             "As you walk further, run into a massive bear. As you turn to run...\n"
             "The bear catches you and you are mauled to death.\n\n    🪦  YOU'RE DEAD 🪦\n\n"
-            # + time.sleep(3)
             + images.game_over,
         },
     },
@@ -85,6 +88,7 @@ movements = {
                 "2": "You have chosen to look for a way around. After a long walk, you find a hidden cave entrance.",
                 "3": "You have chosen to go back to the jungle.",
             },
+            "outcome": {},
         },
         "night": {
             "description": "You are now at the cliffs at night.\nThe wind is howling and it's hard to see anything above your head. "
