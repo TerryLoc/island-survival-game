@@ -1,6 +1,7 @@
 # Description: This file contains the scenes and choices for the game. The scenes are divided into different sections such as day, night, jungle, cave, and cliff. Each section has a description, choices, and outcomes based on the user's choice. The scenes are stored in a dictionary format for easy access and retrieval. The scenes are displayed to the user based on the time of day and the user's choice. The user can explore different paths and make choices that will determine the outcome of the game. The scenes are designed to create an immersive and interactive experience for the user.
 import images
 
+
 DAY_NIGHT = {
     "day": [
         "It is day time. You can see the sun shining brightly.\nThe weather is warm and the sky is clear. You can see the blue ocean and golden beach.\nStraight ahead is a dense jungle.\nTo your left you see a dark cave entrance.\nTo your right, you see a tall rocky cliff face.\n"
@@ -39,13 +40,15 @@ movements = {
             "outcome": {
                 "1": "You have chosen to go left.\nYou walk for a while and come across a sparkling river.\nThe water looks refreshing, & you notice some colorful fish swimming beneath the surface.\nYou choose to swim up stream but the river is so strong.\n You are swept away and your journey has ended.\n\n    🪦  YOU'RE DEAD 🪦\n\n"
                 + images.game_over,
-                "2": "You have chosen to go right.\nYou walk through the dense jungle & encounter a group of friendly monkeys.\nThey offer to show you 1. A hidden path or 2. lead you back to the beach.",
-                "3": "You have chosen to head back to the beach.",
+                "2": "You have chosen to go right.\nYou walk through the dense jungle & encounter a group of friendly monkeys.\nThey offer to show you 1. A hidden path or 2. lead you back to the beach\n.",
+                "3": "You have chosen to head back to the beach.\n\n",
             },
             "options": {
                 "1": "You follow the monkeys and they lead you to a hidden path that takes you to a beautiful waterfall.\nYou decide to take a swim in the cool water and relax.\nAfter a while, a rescue party find you relaxing and swimming.\nYour journey has ended happily. 🏝️\n\n    🎉  YOU ARE SAVED 🎉\n\n"
                 + images.game_over,
                 "2": "You are heading back to the beach and you see smoke.\nAs you emerge from the forest, there is a group of people partying.\nThey have a boat and want to help you.2\nYour journey has ended happily. 🍻\n\n    🎉  YOU ARE SAVED 🎉\n\n"
+                + images.game_over,
+                "3": "You are nearly at the beach when you hear a noise behind you.\nYou turn around and see a group of unfriendly looking people.\nThey are armed and you are taken captive.\nYour journey has ended.\n\n   💀  YOU ARE NEVER SEEN AGAIN  💀\n\n"
                 + images.game_over,
             },
         },
@@ -59,15 +62,20 @@ movements = {
     },
     "cave": {
         "day": {
-            "description": "You are now in the cave. It's dark and damp, and you can hear the sound of dripping water.\n"
-            "You see two paths ahead of you. The left one is narrow and winding, and the other dark and deeper.\n"
-            "Or you can head back to the beach.\n",
+            "description": "You are now in the cave.\nIt's dark and damp, and you can hear the sound of dripping water.\n"
+            "You see two paths ahead of you.\nThe left one is narrow and winding, and the other dark and deeper.\nOr you could head back to the beach.\n",
             "choices": {
                 "1": "Go left down the narrow path",
                 "2": "Or go right towards the dark and deeper path",
                 "3": "Head back to the beach",
             },
-            "outcome": {},
+            "outcome": {
+                "1": "You have chosen to go left down the narrow path.\nYou walk for a while and come across a dead end.\nAs you go to turn a massive bolder FALLS from the celling.\nYou are trapped and your journey has ended.\n\n   🪨  UNFORTUNATELY YOU DIE   🪨\n\n"
+                + images.game_over,
+                "2": "You have chosen to go right towards the dark and deeper path.\nAs you go a little deeper you see a light in the distance.\nYou walk towards it and find a hidden exit.\nYou are on a small beach and there is a little rowing boat.\nYour journey has ended happily. 🚣🏻\n\n    🎉  YOU SAVE YOURSELF  🎉\n\n"
+                + images.game_over,
+                "3": "You have chosen to head back to the beach.\n\n  🏝️  YOU ARE SAFE  🏝️\n\n",
+            },
         },
         "night": {
             "description": "You are now in the cave at night. It's pitch black and you can barely see your own hands.\n"
