@@ -74,7 +74,7 @@ movements = {
                 + images.game_over,
                 "2": "You have chosen to go right towards the dark and deeper path.\nAs you go a little deeper you see a light in the distance.\nYou walk towards it and find a hidden exit.\nYou are on a small beach and there is a little rowing boat.\nYour journey has ended happily. 🚣🏻\n\n    🎉  YOU SAVE YOURSELF  🎉\n\n"
                 + images.game_over,
-                "3": "You have chosen to head back to the beach.\n\n  🏝️  YOU ARE SAFE  🏝️\n\n",
+                "3": "You have chosen to head back to the beach.\nYou run into some friendly pirates\nThey offer to drop you to the closest main land.\n\n  🏝️  YOU ARE SAFE  🏝️\n\n",
             },
         },
         "night": {
