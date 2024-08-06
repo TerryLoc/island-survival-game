@@ -32,7 +32,7 @@ def get_user_name():
             break
 
     initiate_boarding(user_name)
-    
+
 
 def initiate_boarding(user_name):
     """Initiates the boarding process based on user's choice."""
@@ -78,7 +78,6 @@ def get_numeric_choice(prompt):  # Now user_choice is guaranteed to be a number
             return int(user_choice)  # Convert to integer
         else:
             print("Invalid input. Please enter a number matching your choice.")
-
 
 
 def first_event():
