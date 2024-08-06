@@ -1,6 +1,6 @@
 
 ```plaintext
-_ ____ _    ____ _  _ ___     ____ _  _ ____ _  _ _ _  _ ____ _    
+   __        __        __      __        __               __     
 | [__  |    |__| |\ | |  \    [__  |  | |__/ |  | | |  | |__| |    
 | ___] |___ |  | | \| |__/    ___] |__| |  \  \/  |  \/  |  | |___
 ```                    
@@ -55,47 +55,10 @@ Make sure these modules are included in your project directory.
 
 
 ### Prerequisites
-
-- Python 3.x installed on your machine.
+- Python 3.x installed on your machine: [Python website](https://www.python.org/downloads/)
 
 ### Installation
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/yourusername/island-survival-game.git
-    cd island-survival-game
-    ```
-
-2. Install any required packages (if applicable):
-
-    ```bash
-    pip install -r requirements.txt
-    ```
 
 ### Running the Game
 
 Run the main Python file to start the game:
-
-```bash
-python main.py
-
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
