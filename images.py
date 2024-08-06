@@ -1,3 +1,6 @@
+# Description: This file contains the ASCII art for the game. The ASCII art is used to enhance the user experience and create an immersive and interactive game environment.
+import time
+
 title = """
  __          __  _                                                      
  \ \        / / | |                                                     
@@ -19,14 +22,16 @@ title = """
                                            |___/                        
 """
 
+time.sleep(2)
 game_over = """
+
   ██████   █████  ███    ███ ███████      ██████  ██    ██ ███████ ██████  
  ██       ██   ██ ████  ████ ██          ██    ██ ██    ██ ██      ██   ██ 
  ██   ███ ███████ ██ ████ ██ █████       ██    ██ ██    ██ █████   ██████  
  ██    ██ ██   ██ ██  ██  ██ ██          ██    ██  ██  ██  ██      ██   ██ 
   ██████  ██   ██ ██      ██ ███████      ██████    ████   ███████ ██   ██
 """
-
+time.sleep(2)
 you_won = """
  __   _____  _   _   ___ _   _ _____   _______   _____ ___  
  \ \ / / _ \| | | | / __| | | | _ \ \ / /_ _\ \ / / __|   \ 
