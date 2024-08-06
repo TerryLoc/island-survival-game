@@ -11,6 +11,7 @@ YES = "y"
 NO = "n"
 
 
+# The greeting message displayed and rules
 def print_welcome_message():
     """Prints the welcome message and game rules."""
     print(images.title)
@@ -20,6 +21,7 @@ def print_welcome_message():
     get_user_name()
 
 
+# Get the user's name and initiate the boarding process
 def get_user_name():
     """Prompts the user for their name and initiates the boarding process."""
     while True:
@@ -34,6 +36,7 @@ def get_user_name():
     initiate_boarding(user_name)
 
 
+# When the user decides to board the plane
 def initiate_boarding(user_name):
     """Initiates the boarding process based on user's choice."""
     board_plan = ""
@@ -82,8 +85,7 @@ def get_numeric_choice(prompt):  # Now user_choice is guaranteed to be a number
 
 def first_event():
     """Determines the time of day and presents the first event scenario."""
-    # day_night = random.choice(["day", "night"])
-    day_night = "day"
+    day_night = random.choice(["day", "night"])
     if day_night == "day":
         print(DAY_NIGHT["day"][0])
     else:
@@ -91,39 +93,6 @@ def first_event():
 
     time.sleep(3)
     second_event(day_night)
-
-
-def choices(day_info, print_choices):
-    """Prints the choices based on it being daytime."""
-    user_choice = input("\nPick your direction (1-3): \n")
-    if user_choice in day_info["choices"]:
-        if user_choice == "1":
-            print_choices(day_info["outcome"]["1"])
-            exit()
-        elif user_choice == "2":
-            print_choices(day_info["outcome"]["2"])
-            choices_outcomes(day_info, print_choices)
-        else:
-            print_choices(day_info["outcome"]["3"])
-            print(movements["jungle"]["day"]["outcome"]["3"])
-            exit()
-    else:
-        print("Invalid input. Please enter a number matching your choice.")
-
-
-def choices_outcomes(day_info, print_choices):
-    """Prints the choices based the outcome decision of the user."""
-    user_choice = input("\nPick a direction 1 or 2: \n")
-    if user_choice in day_info["options"]:
-        if user_choice == "1":
-            print_choices(day_info["options"]["1"])
-            exit()
-        elif user_choice == "2":
-            print_choices(day_info["options"]["2"])
-            exit()
-        else:
-            print("Only 1 or 2. Please enter a number matching your choice.")
-        choices_outcomes(day_info, print_choices)
 
 
 def second_event(day_night):
@@ -156,6 +125,7 @@ def handle_scenarios(day_night, user_choice, movements):
 
     """Handles the scenarios based on the user's choice."""
     if user_choice == 1:
+        time.sleep(2)  # Add a delay for suspense
         if day_night == "day":
             # To print choices for day:
             day_info = movements["jungle"]["day"]  # Get the day info
@@ -166,12 +136,14 @@ def handle_scenarios(day_night, user_choice, movements):
                 choices(day_info, print_choices)
 
         else:
+            time.sleep(2)  # Add a delay for suspense
             # To print choices for night:
             night_info = movements["jungle"]["night"]  # Get the night info
             print_choices(night_info["description"])
             exit()
 
     elif user_choice == 2:
+        time.sleep(2)  # Add a delay for suspense
         if day_night == "day":
             # To print choices for day:
             day_info = movements["cave"]["day"]
@@ -182,32 +154,81 @@ def handle_scenarios(day_night, user_choice, movements):
                 choices(day_info, print_choices)
 
         else:
+            time.sleep(2)  # Add a delay for suspense
             # To print choices for night:
             night_info = movements["cave"]["night"]
             print_choices(night_info["description"])
             exit()
     elif user_choice == 3:
+        time.sleep(2)  # Add a delay for suspense
         if day_night == "day":
             # To print choices for day:
             day_info = movements["cliff"]["day"]
             print_choices(day_info["description"], day_info["choices"])
+
+            # Get the user's choice
+            while True:
+                choices(day_info, print_choices)
         else:
+            time.sleep(2)  # Add a delay for suspense
             # To print choices for night:
             night_info = movements["cliff"]["night"]
             print_choices(night_info["description"])
             exit()
-    else:
+    elif user_choice == 4:
+        time.sleep(1)  # Add a delay for suspense
         handle_stay_put_scenario()
+    else:
+        print(images.says_no + "\nPLEASE ENTER A NUMBER MATCHING CHOICES.\n\n")
+        second_event(day_night)
+
+
+def choices(day_info, print_choices):
+    """Prints the choices based on it being daytime."""
+    user_choice = input("\nPick your direction (1-3): \n")
+    if user_choice in day_info["choices"]:
+        if user_choice == "1":
+            print_choices(day_info["outcome"]["1"])
+            exit()
+        elif user_choice == "2":
+            print_choices(day_info["outcome"]["2"]["TEXT"])
+            choices_outcomes(day_info, print_choices)
+        else:
+            print_choices(day_info["outcome"]["3"])
+            exit()
+    else:
+        print("Invalid input. Please enter a number matching your choice.")
+
+
+def choices_outcomes(day_info, print_choices):
+    """Prints the choices based the outcome decision of the user."""
+    option = day_info["outcome"]["2"]["options"]
+    user_choice = input("\nWhich way will you go 1 or 2: \n")
+    # The out come of the user's choice
+    if user_choice in option:
+        if user_choice == "1":
+            time.sleep(2)  # Add a delay for suspense
+            print_choices(option["1"])
+            exit()
+        elif user_choice == "2":
+            time.sleep(2)  # Add a delay for suspense
+            print_choices(option["2"])
+            exit()
+    else:
+        print("Only 1 or 2. Please enter the number matching your choice.")
+        choices_outcomes(day_info, print_choices)
 
 
 def handle_stay_put_scenario():
     """Handles the scenario when the user chooses to stay put."""
     print("You have chosen to stay put and wait for help to arrive.\n")
     time.sleep(2)
-    print("You wait for a while but no help arrives.\n")
-    print("You decide to go look for help.\n")
+    print("You wait for a while but no one is coming.\n")
     time.sleep(2)
-    first_event()
+    print(
+        "THE SUN SHINES!\nIt is a beautiful day and you feel safe to explore.\nYou decide to go look for help.\n"
+    )
+    second_event("day")
 
 
 def main():
