@@ -125,7 +125,7 @@ def handle_scenarios(day_night, user_choice, movements):
 
     """Handles the scenarios based on the user's choice."""
     if user_choice == 1:
-        time.sleep(2)  # Add a delay for suspense
+        time.sleep(1)  # Add a delay for suspense
         if day_night == "day":
             # To print choices for day:
             day_info = movements["jungle"]["day"]  # Get the day info
@@ -136,14 +136,14 @@ def handle_scenarios(day_night, user_choice, movements):
                 choices(day_info, print_choices)
 
         else:
-            time.sleep(2)  # Add a delay for suspense
+            time.sleep(1)  # Add a delay for suspense
             # To print choices for night:
             night_info = movements["jungle"]["night"]  # Get the night info
             print_choices(night_info["description"])
             exit()
 
     elif user_choice == 2:
-        time.sleep(2)  # Add a delay for suspense
+        time.sleep(1)  # Add a delay for suspense
         if day_night == "day":
             # To print choices for day:
             day_info = movements["cave"]["day"]
@@ -154,13 +154,13 @@ def handle_scenarios(day_night, user_choice, movements):
                 choices(day_info, print_choices)
 
         else:
-            time.sleep(2)  # Add a delay for suspense
+            time.sleep(1)  # Add a delay for suspense
             # To print choices for night:
             night_info = movements["cave"]["night"]
             print_choices(night_info["description"])
             exit()
     elif user_choice == 3:
-        time.sleep(2)  # Add a delay for suspense
+        time.sleep(1)  # Add a delay for suspense
         if day_night == "day":
             # To print choices for day:
             day_info = movements["cliff"]["day"]
@@ -170,7 +170,7 @@ def handle_scenarios(day_night, user_choice, movements):
             while True:
                 choices(day_info, print_choices)
         else:
-            time.sleep(2)  # Add a delay for suspense
+            time.sleep(1)  # Add a delay for suspense
             # To print choices for night:
             night_info = movements["cliff"]["night"]
             print_choices(night_info["description"])
@@ -207,11 +207,11 @@ def choices_outcomes(day_info, print_choices):
     # The out come of the user's choice
     if user_choice in option:
         if user_choice == "1":
-            time.sleep(2)  # Add a delay for suspense
+            time.sleep(1)  # Add a delay for suspense
             print_choices(option["1"])
             exit()
         elif user_choice == "2":
-            time.sleep(2)  # Add a delay for suspense
+            time.sleep(1)  # Add a delay for suspense
             print_choices(option["2"])
             exit()
     else:
