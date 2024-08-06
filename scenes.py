@@ -107,11 +107,11 @@ movements = {
                 "1": "\nIt's a challenging climb, but you manage to reach a secluded plato.\nYou see a boat in the distance and try to signal for help.\nAs you wave your arms, you lose your balance and fall into the rocky sea below.\n\n    🪦  YOU'RE DEAD 🪦\n\n"
                 + images.game_over,
                 "2": {
-                    "TEXT": "\nYou head around the top of the cliff and find a hidden path.\nYou follow the path and it leads you to a small beach.\nYou see a small boat that is not in the best shape.\nYou can 1: Try your luck and use the boat\n2: Head back through the jungle.",
+                    "TEXT": "\nYou head around the top of the cliff and find a hidden path.\nYou follow the path and it leads you to a small beach.\nYou see a small boat that is not in the best shape.\nYou can 1: Try your luck and use the boat.\n2: Head back through the jungle.",
                     "options": {
                         "1": "\nYou decide to give the boat a go.\nAs you get into deeper water, you notice water fill the boat\nYou are going down & is that a fin?\nAs the boat sinks, you are pulled under.\n\n    🦈  YOU'RE SHARK BAIT   🦈\n\n"
                         + images.game_over,
-                        "2": "\nYou make your way through the jungle and you run into a tribe.\nThey do not look very friendly\nYou are taken by them.\nThey have invited you for dinner.\n\n   💀  YOU ARE NEVER SEEN AGAIN  💀\n\n"
+                        "2": "\nYou make your way through the jungle and you run into a tribe.\nThey do not look very friendly, you're taken by them.\nThey have invited you for dinner.\n\n   💀  YOU ARE NEVER SEEN AGAIN  💀\n\n"
                         + images.game_over,
                     },
                 },
