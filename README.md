@@ -1,7 +1,15 @@
 
-# Island Survival Game
+```plaintext
+_ ____ _    ____ _  _ ___     ____ _  _ ____ _  _ _ _  _ ____ _    
+| [__  |    |__| |\ | |  \    [__  |  | |__/ |  | | |  | |__| |    
+| ___] |___ |  | | \| |__/    ___] |__| |  \  \/  |  \/  |  | |___
+```                    
 
 Welcome to the **Island Survival Game**, a text-based adventure where you must survive on a deserted island after a plane crash. Make the right choices and ultimately escape the island.
+
+Live link: [Island Survival Game](https://island-survival-game-677f52a3b93d.herokuapp.com/)
+
+<img src="images/site image.png" alt="appearance" width="400px" margin=" 0 auto"/>
 
 ## How to Play
 
