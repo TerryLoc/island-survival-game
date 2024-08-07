@@ -56,14 +56,24 @@ Here’s a snippet of the main game loop:
             if __name__ == "__main__":
                 main()
 
-
-### Example Usage
+### Example of the Game
 After starting the game, you'll be asked for your name and whether you're ready to board the plane.
 If you choose to board, the adventure begins with the plane crashing and you being stranded on an island.
 You'll be presented with various scenarios and must choose your actions wisely to survive.
 
+### User Options
+The game provides the user with a list of options to choose from. Here are some examples:
+<img src="images/choices.png" alt="User options" width="400px" margin=" 0 auto"/>
+
+### Game Over
+If you make the wrong choices, you may face a game over scenario. Here's an example:
+<img src="images/playagain.png" alt="Start again" width="400px" margin=" 0 auto"/>
+
+
+
+
 ### Images and Scenes
-The game uses these two modules (images.py & scenes.py)  to get the information need to display the outcome of the users choices.
+The game uses these two modules (images.py & scenes.py) to get the information need to display the outcome of the users choices.
 
 
 ### Prerequisites
