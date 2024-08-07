@@ -12,7 +12,7 @@ Live link: [Island Survival Game](https://island-survival-game-677f52a3b93d.hero
 <img src="images/site_image.png" alt="appearance" width="400px" margin=" 0 auto"/>
 
 
-## Table of Contents
+## [Table of Contents](#table-of-contents)
 
 - [Introduction](#introduction)
 - [How to Play](#how-to-play)
@@ -33,6 +33,8 @@ The game is suitable for anyone who enjoys text-based adventure games and wants 
 1. As a player, I want to be able to make choices that affect the outcome of the game.
 2. As a player, I want to experience different scenarios based on my choices.
 3. As a player, I want to be able to play the game multiple times with different outcomes.
+   
+Return to [Table of Contents](#table-of-contents)
 
 ## [How to Play](#how-to-play)
 
@@ -71,6 +73,9 @@ The game is structured as follows:
 
 <img src="images/game_over.png" alt="First scenario" width="500px" margin=" 0 auto"/>
 
+<br>
+
+Return to [Table of Contents](#table-of-contents)
 
 ## [Game Structure](#game-structure)
 
@@ -152,6 +157,9 @@ The Readme is written in [Markdown](https://www.markdownguide.org/).
 The game was tested manually to ensure that all functions work as expected and that the user can navigate through the game successfully. The game was tested on different operating systems (Windows, Mac) to ensure compatibility.
 
 -  Go to [testing.md](TESTING.md) to see the testing process and results.
+
+Return to [Table of Contents](#table-of-contents)
+
   
  ## [Deployment](#deployment)
 
@@ -219,6 +227,9 @@ To deploy a GitHub repository to your local computer by downloading it, follow t
 You can now make changes to the code and work on the project locally.
 Please note that this method will not allow you to easily sync changes between your local repository and the GitHub repository. If you want to push changes back to the GitHub repository, it is recommended to use git commands and set up a local git repository for the project.
 
+Return to [Table of Contents](#table-of-contents)
+
+
 ## [Credits](#credits)
 
 The game was inspired by text-based adventure games and survival scenarios. The game structure and layouts were created by me, but I used various resources to help me build the game:
@@ -234,5 +245,6 @@ I would like to thank my mentor, **Rory Patrick Sheridan**, for his guidance and
 
 This project was a great learning experience and I'm excited to share it with others.
 
+Return to [Table of Contents](#table-of-contents)
 
 
