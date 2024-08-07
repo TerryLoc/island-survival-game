@@ -200,10 +200,10 @@ def handle_scenarios(day_night, user_choice, movements):
 
 
 def beach():
-    """Handles the scenario when the user chooses to go back to the beach."""
+    """Handles the scenario when the user chooses to go back to the beach. It gives a random outcome."""
     beach_choice = random.choice(["1", "2", "3", "4"])
     print(movements["back_to_beach"][beach_choice])
-    exit()
+    play_again()
 
 
 def choices(day_info, print_choices):
@@ -220,7 +220,6 @@ def choices(day_info, print_choices):
         elif user_choice == "3":
             # Go back to the beach and exit with a random message
             beach()
-            play_again()
     else:
         # Whe the user enters an invalid input
         print("Invalid input. Please enter a number matching your choice.")
