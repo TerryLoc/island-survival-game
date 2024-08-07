@@ -1,5 +1,4 @@
 # Description: This file contains the ASCII art for the game. The ASCII art is used to enhance the user experience and create an immersive and interactive game environment.
-import time
 
 title = """
  __          __  _                                                      
