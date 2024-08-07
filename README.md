@@ -9,29 +9,42 @@ Welcome to the **Island Survival Game**, a text-based adventure where you must s
 
 Live link: [Island Survival Game](https://island-survival-game-677f52a3b93d.herokuapp.com/)
 
-<img src="images/site image.png" alt="appearance" width="400px" margin=" 0 auto"/>
+<img src="images/site_image.png" alt="appearance" width="400px" margin=" 0 auto"/>
 
 ## How to Play
 
+The game is built with a multiple-choice format. Here's how to play:
 1. You will be given a scenario and you choose from a list of options.
 2. Use numbers to enter your option (e.g., 1, 2, 3, 4).
 3. You will be presented with a new scenario based on your choice.
 4. Make the right choices to survive and escape the island.
 
 ## Game Structure
+
+### Flowchart
+Here is the flowchart of the game structure:
+
+<img src="images/island_flowchart.jpeg" alt="flowchart" width="400px" margin=" 0 auto"/>
+
+<br>
+
+The game is built with a modular structure to handle different scenarios and outcomes. Here's an overview of all the functions in the game:
+
 ### Main Functions
 1.  **print_welcome_message()**: Displays the welcome message and game rules.
 2.  **get_user_name()**: Prompts the user for their name and initiates the boarding process.
 3.  **initiate_boarding(user_name)**: Handles the boarding process and starts the first event.
-4.  **exit_game()**: Exits the game with a goodbye message.
-5.  **get_numeric_choice(prompt)**: Prompts the user for a numeric input and validates it.
-6.  **first_event()**: Determines the time of day and presents the first event scenario.
-7.  **second_event(day_night)**: Presents the second event scenario based on the user's choice.
-8.  handle_scenarios(day_night, user_choice, movements): Handles scenarios based on the user's choice.
-9.  **choices(day_info, print_choices)**: Prints the choices based on it being daytime.
-10. **choices_outcomes(day_info, print_choices)**: Prints the choices based on the outcome decision of the user.
-11. **handle_stay_put_scenario()**: Handles the scenario when the user chooses to stay put.
-12. **main()**: The main function to start the game.
+4.  **exit_game()**: Exit the game with a goodbye message if player does not board the plane.
+5.  **play_again()**: Prompts the user to play again or exit the game.
+6.  **get_numeric_choice(prompt)**: Prompts the user for a numeric input and validates it.
+7.  **first_event()**: Determines the time of day and presents the first event scenario.
+8.  **second_event(day_night)**: Presents the second event scenario based on the user's choice.
+9.  **handle_scenarios(day_night, user_choice, movements)**: Handles scenarios based on the user's choice.
+10. **beach()**: Handles the random outcome on returning to the beach.
+11. **choices(day_info, print_choices)**: Prints the choices based on it being daytime.
+12. **choices_outcomes(day_info, print_choices)**: Prints the choices based on the outcome decision of the user.
+13. **handle_stay_put_scenario()**: Handles the scenario when the user chooses to stay put.
+14. **main()**: The main function to start the game.
 
 #### Sample Code
 Here’s a snippet of the main game loop:
