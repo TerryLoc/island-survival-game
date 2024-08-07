@@ -19,6 +19,7 @@ Live link: [Island Survival Game](https://island-survival-game-677f52a3b93d.hero
 - [Game Structure](#game-structure)
 - [Libraries, Technologies and Tools](#libraries-technologies-and-tools)
 - [Testing](#testing)
+- [Deployment](#deployment)
 
 ## [Introduction](#introduction)
 
@@ -145,4 +146,13 @@ The Readme is written in [Markdown](https://www.markdownguide.org/).
 - [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&f=Big&t=Island%20Survival%20Game): Used to generate the ASCII art used in images.py.
 - [CI Python Linter](https://pep8ci.herokuapp.com/#): To validate and check my code for best code practices.
 
+## [Testing](#testing)
+
+The game was tested manually to ensure that all functions work as expected and that the user can navigate through the game successfully. The game was tested on different operating systems (Windows, Mac) to ensure compatibility.
+
+-  Go to [testing.md](TESTING.md) to see the testing process and results.
+  
+ ## [Deployment](#deployment)
+
+The game is deployed on Heroku and can be accessed [here](https://island-survival-game-677f52a3b93d.herokuapp.com/).
 
