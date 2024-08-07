@@ -1,6 +1,7 @@
 import random
 import time
 import images
+from rich import print  # type: ignore
 
 # import jungle
 # import cave
