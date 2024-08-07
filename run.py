@@ -63,7 +63,7 @@ def initiate_boarding(user_name):
         exit_game()
 
 
-# Functions to handle user input and game flow
+# When the user decides not to board the plane
 def exit_game():
     """Exits the game with a goodbye message."""
     print("\nYou have decided not to board your flight.")
@@ -71,6 +71,21 @@ def exit_game():
     print("Goodbye for now!")
     print(images.game_over)
     exit()
+
+
+# To prompt the user to play again
+def play_again():
+    """Prompts the user to play again."""
+    while True:
+        choice = input("Would you like to play again? (y/n): ").strip().lower()
+        if choice == YES:
+            main()  # `main()` is the entry point of the game
+            break
+        elif choice == NO:
+            print("\nThank you for playing, hopefully we'll see you again!\n")
+            exit()
+        else:
+            print(f"Invalid input. Please enter '{YES}' or '{NO}'.")
 
 
 def get_numeric_choice(prompt):  # Now user_choice is guaranteed to be a number
@@ -140,7 +155,7 @@ def handle_scenarios(day_night, user_choice, movements):
             # To print choices for night:
             night_info = movements["jungle"]["night"]  # Get the night info
             print_choices(night_info["description"])
-            exit()
+            play_again()
 
     elif user_choice == 2:
         time.sleep(1)  # Add a delay for suspense
@@ -158,7 +173,8 @@ def handle_scenarios(day_night, user_choice, movements):
             # To print choices for night:
             night_info = movements["cave"]["night"]
             print_choices(night_info["description"])
-            exit()
+            play_again()
+
     elif user_choice == 3:
         time.sleep(1)  # Add a delay for suspense
         if day_night == "day":
@@ -174,7 +190,8 @@ def handle_scenarios(day_night, user_choice, movements):
             # To print choices for night:
             night_info = movements["cliff"]["night"]
             print_choices(night_info["description"])
-            exit()
+            play_again()
+
     elif user_choice == 4:
         time.sleep(1)  # Add a delay for suspense
         handle_stay_put_scenario()
@@ -196,13 +213,15 @@ def choices(day_info, print_choices):
     if user_choice in day_info["choices"]:
         if user_choice == "1":
             print_choices(day_info["outcome"]["1"])
-            exit()
+            play_again()
+
         elif user_choice == "2":
             print_choices(day_info["outcome"]["2"]["TEXT"])
             choices_outcomes(day_info, print_choices)
         elif user_choice == "3":
             # Go back to the beach and exit with a random message
             beach()
+            play_again()
     else:
         print("Invalid input. Please enter a number matching your choice.")
 
@@ -216,11 +235,13 @@ def choices_outcomes(day_info, print_choices):
         if user_choice == "1":
             time.sleep(1)  # Add a delay for suspense
             print_choices(option["1"])
-            exit()
+            play_again()
+
         elif user_choice == "2":
             time.sleep(1)  # Add a delay for suspense
             print_choices(option["2"])
-            exit()
+            play_again()
+
     else:
         print("Only 1 or 2. Please enter the number matching your choice.")
         choices_outcomes(day_info, print_choices)
