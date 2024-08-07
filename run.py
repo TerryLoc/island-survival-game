@@ -197,6 +197,7 @@ def handle_scenarios(day_night, user_choice, movements):
         time.sleep(1)  # Add a delay for suspense
         handle_stay_put_scenario()
     else:
+        # When the user enters an invalid input (not 1-4)
         print(images.says_no + "\nPLEASE ENTER A NUMBER MATCHING CHOICES.\n\n")
         second_event(day_night)
 
@@ -224,6 +225,7 @@ def choices(day_info, print_choices):
             beach()
             play_again()
     else:
+        # Whe the user enters an invalid input
         print("Invalid input. Please enter a number matching your choice.")
 
 
@@ -245,6 +247,7 @@ def choices_outcomes(day_info, print_choices):
 
     else:
         print("Only 1 or 2. Please enter the number matching your choice.")
+        # Re-prompt the user for their choice
         choices_outcomes(day_info, print_choices)
 
 
@@ -257,6 +260,7 @@ def handle_stay_put_scenario():
     print(
         "THE SUN SHINES!\nIt is a beautiful day and you feel safe to explore.\nYou decide to go look for help.\n"
     )
+    # Call the function to present the second event scenario with day time.
     second_event("day")
 
 
@@ -266,4 +270,5 @@ def main():
 
 
 if __name__ == "__main__":
+    """This block of code will only run if the script is executed directly"""
     main()
