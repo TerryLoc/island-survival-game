@@ -130,6 +130,7 @@ def second_event(day_night):
 
 
 def handle_scenarios(day_night, user_choice, movements):
+    """Handles the scenarios based on the user's choice."""
 
     def print_choices(description, choices=None):
         """Prints the description and choices."""
@@ -139,7 +140,6 @@ def handle_scenarios(day_night, user_choice, movements):
             for key, value in choices.items():
                 print(f"{key}: {value}")
 
-    """Handles the scenarios based on the user's choice."""
     if user_choice == 1:
         time.sleep(1)  # Add a delay for suspense
         if day_night == "day":

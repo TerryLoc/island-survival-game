@@ -44,7 +44,7 @@ The Python code was validated and tested using the [PEP8 Linter validator](https
 The following bugs were not fixed as they did not effect the gameplay or progress of the program.
 
 Here is the list of the errors:
-1. E501 line too long **(on a all the files)**
+1. E501 line too long **(on all the files)**
 2. W605 invalid escape sequence **(on images.py)**
 3. W291 trailing whitespace **(on images.py)**
 4. w293 blank line contains whitespace **(on images.py)**
