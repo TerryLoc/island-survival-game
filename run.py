@@ -39,19 +39,19 @@ def get_user_name():
 # When the user decides to board the plane
 def initiate_boarding(user_name):
     """Initiates the boarding process based on user's choice."""
-    board_plan = ""
-    while board_plan not in [YES, NO]:
-        board_plan = (
+    board_plane = ""
+    while board_plane not in [YES, NO]:
+        board_plane = (
             input(
                 f"\nWelcome {user_name}! Are you ready to board your flight (y/n)? \n"
             )
             .lower()
             .strip()
         )
-        if board_plan not in [YES, NO]:
+        if board_plane not in [YES, NO]:
             print("Please enter 'y' for yes or 'n' for no.")
 
-    if board_plan == YES:
+    if board_plane == YES:
         print("\nGreat! You are now boarding your flight to your work destination.\n")
         print("Unfortunately your plane gets caught in a freak storm.\n")
         print(
