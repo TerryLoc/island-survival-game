@@ -49,8 +49,6 @@ movements = {
                         + images.you_won,
                     },
                 },
-                "3": "\nYou are heading back to the beach\n\nYou are nearly at the beach when you hear a noise behind you.\nYou turn around and see a group of unfriendly looking people.\nThey are armed and you are taken captive.\nYour journey has ended.\n\n   💀  YOU ARE NEVER SEEN AGAIN  💀\n\n"
-                + images.game_over,
             },
         },
         "night": {
@@ -82,8 +80,6 @@ movements = {
                         + images.you_won,
                     },
                 },
-                "3": "\nYou have chosen to head back to the beach.\nYou run into some friendly pirates\nThey offer to drop you to the closest main land.\n\n  🏝️  YOU ARE SAFE  🏝️\n\n"
-                + images.you_won,
             },
         },
         "night": {
@@ -115,13 +111,23 @@ movements = {
                         + images.game_over,
                     },
                 },
-                "3": "\nYou have chosen to head back to the beach.\nYou run into some pirates digging!\nYey... they are friendly.\nThey offer to drop you to the closest main land.\n\n  🏝️  YOU ARE SAFE  🏝️\n\n"
-                + images.you_won,
             },
         },
         "night": {
             "description": "\nYou are now at the cliffs at night.\nThe wind is howling and it's hard to see anything around you.\nYou move towards the edge of the cliff.\nAs you get there a massive wind blows you of balance.\n\n    🌊  YOU FALL TO THE SEA 🌊\n\n"
             + images.game_over,
         },
+    },
+    "back_to_beach": {
+        "1": "\nYou are heading back to the beach\n\nYou are nearly at the beach when you hear a noise behind you.\nYou turn around and see a group of unfriendly looking people.\nThey are armed and you are taken captive.\nYour journey has ended.\n\n   🤦‍♂️  YOU ARE HELD FOR RANSOM  🤦‍♂️\n\n"
+        + images.game_over,
+        "2": "\nYou are heading back to the beach\n\nYou are nearly at the beach when you hear a noise behind you.\nYou turn around and see a group of friendly looking explores.\nThey offer to take you to the nearest main land.\n\n  🏝️  YOU ARE SAFE  🏝️\n\n"
+        + images.you_won,
+        "3": "\nYou have chosen to head back to the beach.\nYou run into some pirates digging!\nYey... they are friendly.\nThey offer to drop you to the closest main land.\n\n  🏝️  YOU ARE SAFE  🏝️\n\n"
+        + images.you_won,
+        "4": "You are on route back to the beach.\nYou come across a massive hole in the ground.\nYou decide to explore it.\nAs you walk further, you fall into a pit of spikes.\n\n    🪦  YOU'RE DEAD 🪦\n\n"
+        + images.game_over,
+        "5": "\nYou make your way through the jungle and you run into a tribe.\nThey do not look very friendly, you're taken by them.\nThey have invited you for dinner.\n\n   💀  YOU ARE NEVER SEEN AGAIN  💀\n\n"
+        + images.game_over,
     },
 }
