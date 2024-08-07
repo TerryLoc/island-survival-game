@@ -20,6 +20,7 @@ Live link: [Island Survival Game](https://island-survival-game-677f52a3b93d.hero
 - [Libraries, Technologies and Tools](#libraries-technologies-and-tools)
 - [Testing](#testing)
 - [Deployment](#deployment)
+- [Credits](#credits)
 
 ## [Introduction](#introduction)
 
@@ -155,4 +156,83 @@ The game was tested manually to ensure that all functions work as expected and t
  ## [Deployment](#deployment)
 
 The game is deployed on Heroku and can be accessed [here](https://island-survival-game-677f52a3b93d.herokuapp.com/).
+
+To deploy the game on Heroku, follow these steps:
+1. Navigate to the [Heroku](https://www.heroku.com) website.
+2. Create or log in to your account.
+3. On your dashboard:
+   - If you don't have any projects created yet, there should be a "Create a new app" prompt in the middle of the screen.
+   - If you have some projects already, click on the "New" tab on the top right corner of the screen just below the profile bauble. 
+4. Enter a unique application name for your project and select the region you are based in. Click "create app".
+5. Once inside the app, select "Settings" button from the menu in the middle. It's important to edit the "Settings" tab before deploying the project: 
+    1. Click on "Reveal Config Vars" and enter the following:
+        - If you are using any APIs you will need to copy paste your creds.json details:
+            - In the "key" box type "CREDS". 
+            - In the "value" box copy the contents of your creds.json file: 
+            - Click "Add".
+
+        - type in PORT to the "key" box, and 8000 to the "value" box:
+            - click "Add".
+
+    2. Add Buildpacks below Config Vars. Click on "Add buildpack":
+
+        - First, select Python and click "Add buildpack".
+        - Second, select node.js and click "Add buildpack".
+        
+    **Note:** Python has to be listed first (at the top) of the two packs.
+
+6. Once step 5 is done, navigate to the "Deploy" tab a the top of the screen to the left of where the Settings tab is located.
+7. Click on "Github" icon under "Deployment method", and connect Heroku to your Github account. 
+8. Once the accounts are connected you can choose between automatic or manual deployment:
+
+    - Automatic deployment will automatically update your app once you use "git push" command in  your IDE. 
+    - Manual deployment will require you to manually "push" the changes you made in the IDE to the Heroku system.
+  
+### How to clone a repository
+
+Fork the repository by clicking the "Fork" button at the top of the repository page.
+Clone the forked repository to your local machine using the git clone command.
+            
+        git clone https://github.com/TerryLoc/island-survival-game
+
+Make any necessary changes or updates to the project.
+Commit your changes and push them to your GitHub repository.
+
+        git add .
+        git commit -m "Your commit message"
+        git push origin main
+
+Navigate to the repository settings on GitHub.
+Under the GitHub Pages section, choose the main branch as the source and save the changes.
+Your site will be published and accessible at https://github.com/{username}/island-survival-game
+
+### How to deploy locally
+
+To deploy a GitHub repository to your local computer by downloading it, follow these steps:
+
+1. Go to the GitHub repository that you want to deploy.
+2. Click on the green "Code" button located on the right side of the repository.
+3. In the dropdown menu, select the "Download ZIP" option.
+4. Once the ZIP file is downloaded, extract its contents to a location on your local computer.
+5. Open your preferred code editor and navigate to the folder where you extracted the repository.
+   
+You can now make changes to the code and work on the project locally.
+Please note that this method will not allow you to easily sync changes between your local repository and the GitHub repository. If you want to push changes back to the GitHub repository, it is recommended to use git commands and set up a local git repository for the project.
+
+## [Credits](#credits)
+
+The game was inspired by text-based adventure games and survival scenarios. The game structure and layouts were created by me, but I used various resources to help me build the game:
+
+- [Python Documentation](https://docs.python.org/3/): For learning about Python functions and libraries.
+- [Stack Overflow](https://stackoverflow.com/): For finding solutions to coding problems.
+- [github copilot](https://copilot.github.com/): For generating code snippets and suggestions.
+- [ChatGPT](https://chat.openai.com/): For generating ideas and scenarios for the game.
+
+### Acknowledgements
+
+I would like to thank my mentor, **Rory Patrick Sheridan**, for his guidance and support throughout the project. I would also like to thank the Code Institute tutors and students for their help and feedback. I would also like to thank [Laura Kondrataite](https://github.com/laurakond) for sharing her Readme and Testing (VERY HELPFUL).
+
+This project was a great learning experience and I'm excited to share it with others.
+
+
 
