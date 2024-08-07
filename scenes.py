@@ -119,7 +119,7 @@ movements = {
         },
     },
     "back_to_beach": {
-        "1": "\nYou are heading back to the beach\n\nYou are nearly at the beach when you hear a noise behind you.\nYou turn around and see a group of unfriendly looking people.\nThey are armed and you are taken captive.\nYour journey has ended.\n\n   🤦‍♂️  YOU ARE HELD FOR RANSOM  🤦‍♂️\n\n"
+        "1": "\nYou are heading back to the beach\n\nYou are nearly at the beach when you hear a noise behind you.\nYou turn around and see a group of unfriendly looking people.\nThey are armed and you are taken captive.\nYour journey has ended.\n\n   ⚔️  YOU ARE HELD FOR RANSOM  ⚔️\n\n"
         + images.game_over,
         "2": "\nYou are heading back to the beach\n\nYou are nearly at the beach when you hear a noise behind you.\nYou turn around and see a group of friendly looking explores.\nThey offer to take you to the nearest main land.\n\n  🏝️  YOU ARE SAFE  🏝️\n\n"
         + images.you_won,
