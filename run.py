@@ -2,9 +2,6 @@ import random
 import time
 import images
 from rich import print  # type: ignore
-
-# import jungle
-# import cave
 from scenes import DAY_NIGHT
 from scenes import movements
 
