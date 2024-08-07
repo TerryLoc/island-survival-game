@@ -50,8 +50,7 @@ If you choose to board, the adventure begins with the plane crashing and you bei
 You'll be presented with various scenarios and must choose your actions wisely to survive.
 
 ### Images and Scenes
-The game uses images and scenes from the images and scenes modules.
-Make sure these modules are included in your project directory.
+The game uses these two modules (images.py & scenes.py)  to get the information need to display the outcome of the users choices.
 
 
 ### Prerequisites
