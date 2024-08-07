@@ -1,6 +1,12 @@
+```plaintext
+   __        __        __      __        __               __     
+| [__  |    |__| |\ | |  \    [__  |  | |__/ |  | | |  | |__| |    
+| ___] |___ |  | | \| |__/    ___] |__| |  \  \/  |  \/  |  | |___
+```  
+
 ####   [Table of Contents](#table-of-contents)
 
-- [Testing for the project](#testing-for-the-project)
+- [Testing the project](#testing-the-project)
   - [Code Test](#code-test)
     - [Code Validation with PEP8](#code-validation-with-pep8)
     - [Bugs](#bugs)
@@ -16,7 +22,7 @@ Return to [Readme.md](README.md)
 <hr>
 
 
-# [Testing for the project](#testing-for-the-project)
+# [Testing the project](#testing-the-project)
 
 Here is the testing for the project to ensure that the game is working as expected.
 The testing is divided into two parts: testing the code and testing the gameplay.
