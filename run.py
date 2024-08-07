@@ -183,6 +183,13 @@ def handle_scenarios(day_night, user_choice, movements):
         second_event(day_night)
 
 
+def beach():
+    """Handles the scenario when the user chooses to go back to the beach."""
+    beach_choice = random.choice(["1", "2", "3", "4"])
+    print(movements["back_to_beach"][beach_choice])
+    exit()
+
+
 def choices(day_info, print_choices):
     """Prints the choices based on it being daytime."""
     user_choice = input("\nPick your direction (1-3): \n")
@@ -193,9 +200,9 @@ def choices(day_info, print_choices):
         elif user_choice == "2":
             print_choices(day_info["outcome"]["2"]["TEXT"])
             choices_outcomes(day_info, print_choices)
-        else:
-            print_choices(day_info["outcome"]["3"])
-            exit()
+        elif user_choice == "3":
+            # Go back to the beach and exit with a random message
+            beach()
     else:
         print("Invalid input. Please enter a number matching your choice.")
 
