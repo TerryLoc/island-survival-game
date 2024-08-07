@@ -71,7 +71,7 @@ def exit_game():
     print("Maybe you will catch the next one.")
     print("Goodbye for now!")
     print(images.game_over)
-    exit()
+    play_again()
 
 
 # To prompt the user to play again
